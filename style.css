@@ -1,0 +1,129 @@
+.js-loading *,
+.js-loading *::before,
+.js-loading *::after {
+  animation-play-state: paused !important;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#canvas {
+  background: #000;
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 200px;
+  max-height: 300px;
+  animation: takeoff 1s cubic-bezier(0.03, 0.61, 0.93, 0.08) forwards;
+}
+
+.ufo {
+  width: 100px;
+  max-height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate3d(-150%, 0, 0);
+  animation: ufo-sight 15s 4s ease-in-out;
+  position: absolute;
+  z-index: 99;
+}
+
+.ufo-light {
+  opacity: 0;
+  animation: light 5s 12s ease-in;
+}
+
+.face-circle {
+  animation: look-ufo 17s 4s ease-in-out;
+}
+
+@keyframes light {
+  0%,
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes ufo-sight {
+  0% {
+    transform: translate3d(-150%, 0, 0);
+  }
+
+  25%,
+  45% {
+    transform: translate3d(0, 0, 0);
+    left: 5%;
+  }
+
+  50%,
+  90% {
+    left: 50%;
+    top: 20%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  100% {
+    top: 30%;
+    left: 120%;
+  }
+}
+
+@keyframes look-ufo {
+  0%,
+  15% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  16%,
+  48% {
+    transform: translate3d(5px, 2px, 0);
+  }
+
+  49%,
+  82% {
+    transform: translate3d(7px, 7px, 0);
+  }
+
+  83%,
+  100% {
+    transform: translate3d(-7px, 7px, 0);
+  }
+}
+
+#flame1,
+#flame2,
+#flame3 {
+  animation: move-flame 400ms linear infinite;
+}
+
+#flame3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes move-flame {
+  0%,
+  100% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes takeoff {
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

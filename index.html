@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Adventure</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <canvas id="canvas">
+  </canvas>
+  <svg class="rocket" viewBox="0 0 581 911" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="path-1-inside-1" fill="white">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M577.84 908.5C579.921 894.469 581 880.11 581 865.5C581 705.061 450.939 575 290.5 575C130.061 575 0 705.061 0 865.5C0 880.11 1.07858 894.469 3.16045 908.5C23.94 768.452 144.672 661 290.5 661C436.328 661 557.06 768.452 577.84 908.5Z" />
+    </mask>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M577.84 908.5C579.921 894.469 581 880.11 581 865.5C581 705.061 450.939 575 290.5 575C130.061 575 0 705.061 0 865.5C0 880.11 1.07858 894.469 3.16045 908.5C23.94 768.452 144.672 661 290.5 661C436.328 661 557.06 768.452 577.84 908.5Z"
+      fill="#DE3C3C" />
+    <path
+      d="M577.84 908.5L572.894 909.234H582.785L577.84 908.5ZM3.16045 908.5L-1.78541 909.234H8.1063L3.16045 908.5ZM576 865.5C576 879.864 574.94 893.977 572.894 907.766L582.785 909.234C584.903 894.96 586 880.357 586 865.5H576ZM290.5 580C448.177 580 576 707.823 576 865.5H586C586 702.3 453.7 570 290.5 570V580ZM5 865.5C5 707.823 132.823 580 290.5 580V570C127.3 570 -5 702.3 -5 865.5H5ZM8.1063 907.766C6.06036 893.977 5 879.864 5 865.5H-5C-5 880.357 -3.90321 894.96 -1.78541 909.234L8.1063 907.766ZM8.1063 909.234C28.5275 771.601 147.186 666 290.5 666V656C142.157 656 19.3524 765.303 -1.78541 907.766L8.1063 909.234ZM290.5 666C433.814 666 552.472 771.601 572.894 909.234L582.785 907.766C561.648 765.303 438.843 656 290.5 656V666Z"
+      fill="black" mask="url(#path-1-inside-1)" />
+    <rect x="233.5" y="705.5" width="113" height="34" fill="white" stroke="black" stroke-width="5" />
+    <mask id="path-4-inside-2" fill="white">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M359.554 725.804C409.681 655.042 455 557.928 455 405.5C455 206.786 360.587 88.6956 307.814 22.6879C301.111 14.3047 295.08 6.76152 290 0C285.174 6.27885 279.593 13.1886 273.465 20.7771C220.051 86.9122 125 204.6 125 405.5C125 572.821 163.251 646.697 222.831 725.492C243.606 720.67 266.491 718 290.529 718C315.079 718 338.428 720.785 359.554 725.804Z" />
+    </mask>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M359.554 725.804C409.681 655.042 455 557.928 455 405.5C455 206.786 360.587 88.6956 307.814 22.6879C301.111 14.3047 295.08 6.76152 290 0C285.174 6.27885 279.593 13.1886 273.465 20.7771C220.051 86.9122 125 204.6 125 405.5C125 572.821 163.251 646.697 222.831 725.492C243.606 720.67 266.491 718 290.529 718C315.079 718 338.428 720.785 359.554 725.804Z"
+      fill="white" />
+    <path
+      d="M359.554 725.804L358.629 729.695L361.256 730.319L362.818 728.116L359.554 725.804ZM307.814 22.6879L310.938 20.1901L310.938 20.1901L307.814 22.6879ZM290 0L293.198 -2.40279L290.036 -6.61083L286.829 -2.43761L290 0ZM273.465 20.7771L276.576 23.2904L276.576 23.2904L273.465 20.7771ZM222.831 725.492L219.641 727.904L221.207 729.975L223.736 729.388L222.831 725.492ZM451 405.5C451 557.006 405.995 653.325 356.29 723.491L362.818 728.116C413.367 656.758 459 558.849 459 405.5H451ZM304.689 25.1858C357.354 91.0577 451 208.225 451 405.5H459C459 205.347 363.819 86.3335 310.938 20.1901L304.689 25.1858ZM286.802 2.40279C291.926 9.22223 297.998 16.8162 304.689 25.1858L310.938 20.1901C304.224 11.7932 298.235 4.30082 293.198 -2.40279L286.802 2.40279ZM276.576 23.2904C282.697 15.7122 288.31 8.76229 293.171 2.43761L286.829 -2.43761C282.038 3.79542 276.49 10.6651 270.353 18.2639L276.576 23.2904ZM129 405.5C129 206.045 223.279 89.2816 276.576 23.2904L270.353 18.2639C216.823 84.5428 121 203.155 121 405.5H129ZM226.022 723.079C196.356 683.846 172.171 646.062 155.354 597.387C138.529 548.691 129 488.86 129 405.5H121C121 489.462 130.596 550.229 147.792 600C164.996 649.792 189.726 688.343 219.641 727.904L226.022 723.079ZM223.736 729.388C244.202 724.638 266.783 722 290.529 722V714C266.199 714 243.01 716.702 221.927 721.595L223.736 729.388ZM290.529 722C314.782 722 337.819 724.752 358.629 729.695L360.478 721.912C339.037 716.819 315.377 714 290.529 714V722Z"
+      fill="black" mask="url(#path-4-inside-2)" />
+    <path d="M153 234C190.451 212.023 297.482 180.039 426 227.914" stroke="#DE3C3C" stroke-width="5" />
+    <path d="M148 255.619C186.96 233.643 295.803 200.744 429.5 248.619" stroke="#DE3C3C" stroke-width="5" />
+    <circle cx="290.5" cy="342.5" r="57" stroke="#DE3C3C" stroke-width="5" />
+    <circle cx="290.5" cy="342.5" r="49.5" fill="#F3E8AF" />
+    <path id="flame1"
+      d="M231.827 805.266C227.387 775.068 241.9 750.506 249.712 742H320.632C343.326 766.243 349 787.544 349 795.165H340.983C349.37 805.372 348.178 828.481 346.533 838.759L338.516 832.911C343.45 849.073 309.737 891.038 292.264 910C271.049 892.987 250.945 851.519 243.545 832.911L240.461 844.608C235.527 837.803 235.527 808.81 236.144 795.165L231.827 805.266Z"
+      fill="#EC2D2D" stroke="black" />
+    <path id="flame2"
+      d="M246.561 791.709C243.551 767.982 253.39 748.684 258.686 742H306.767C322.153 761.048 326 777.785 326 783.772H320.565C326.251 791.792 325.443 809.949 324.328 818.025L318.892 813.43C322.237 826.129 299.381 859.101 287.535 874C273.152 860.633 259.522 828.051 254.505 813.43L252.414 822.62C249.069 817.273 249.069 794.494 249.488 783.772L246.561 791.709Z"
+      fill="#FAF64A" stroke="black" />
+    <path id="flame3"
+      d="M254.449 779.658C252.04 761.684 259.912 747.063 264.149 742H302.614C314.923 756.43 318 769.11 318 773.646H313.652C318.201 779.722 317.554 793.477 316.662 799.595L312.314 796.114C314.99 805.734 296.705 830.713 287.228 842C275.722 831.873 264.818 807.19 260.804 796.114L259.131 803.076C256.456 799.025 256.456 781.768 256.79 773.646L254.449 779.658Z"
+      fill="#2E43E8" stroke="black" />
+    <path d="M283 380H296V390H283V380Z" fill="#7D7676" />
+    <circle class="face-circle" cx="289.5" cy="353.5" r="28.5" fill="#C8926C" />
+    <circle cx="280.811" cy="346.372" r="6.60366" fill="#363232" />
+    <circle cx="298.189" cy="346.372" r="6.60366" fill="#363232" />
+    <path d="M275.945 359.927C279.884 366.878 292.976 373.134 303.402 361.317" stroke="black" stroke-width="2" />
+  </svg>
+
+
+
+
+  <svg class="ufo" viewBox="0 0 1270 926" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="635" cy="239" rx="635" ry="239" fill="#18C01F" />
+    <mask id="path-2-inside-1" fill="white">
+      <rect x="26" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="26" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-2-inside-1)" />
+    <mask id="path-3-inside-2" fill="white">
+      <rect x="546" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="546" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-3-inside-2)" />
+    <mask id="path-4-inside-3" fill="white">
+      <rect x="286" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="286" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-4-inside-3)" />
+    <mask id="path-5-inside-4" fill="white">
+      <rect x="806" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="806" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-5-inside-4)" />
+    <mask id="path-6-inside-5" fill="white">
+      <rect x="1066" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="1066" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-6-inside-5)" />
+    <mask id="path-7-inside-6" fill="white">
+      <rect x="156" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="156" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-7-inside-6)" />
+    <mask id="path-8-inside-7" fill="white">
+      <rect x="676" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="676" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-8-inside-7)" />
+    <mask id="path-9-inside-8" fill="white">
+      <rect x="416" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="416" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-9-inside-8)" />
+    <mask id="path-10-inside-9" fill="white">
+      <rect x="936" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="936" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-10-inside-9)" />
+    <mask id="path-11-inside-10" fill="white">
+      <rect x="1196" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="1196" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-11-inside-10)" />
+    <mask id="path-12-inside-11" fill="white">
+      <rect x="91" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="91" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-12-inside-11)" />
+    <mask id="path-13-inside-12" fill="white">
+      <rect x="611" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="611" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-13-inside-12)" />
+    <mask id="path-14-inside-13" fill="white">
+      <rect x="351" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="351" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-14-inside-13)" />
+    <mask id="path-15-inside-14" fill="white">
+      <rect x="871" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="871" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-15-inside-14)" />
+    <mask id="path-16-inside-15" fill="white">
+      <rect x="1131" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="1131" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-16-inside-15)" />
+    <mask id="path-17-inside-16" fill="white">
+      <rect x="221" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="221" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-17-inside-16)" />
+    <mask id="path-18-inside-17" fill="white">
+      <rect x="741" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="741" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-18-inside-17)" />
+    <mask id="path-19-inside-18" fill="white">
+      <rect x="481" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="481" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-19-inside-18)" />
+    <mask id="path-20-inside-19" fill="white">
+      <rect x="1001" y="219" width="46" height="46" rx="2" />
+    </mask>
+    <rect x="1001" y="219" width="46" height="46" rx="2" fill="#AEF835" stroke="black" stroke-width="6"
+      mask="url(#path-20-inside-19)" />
+    <path class="ufo-light" d="M432.5 513H848L937 926H334L432.5 513Z" fill="url(#paint0_linear)" />
+    <path
+      d="M935 446C935 465.882 800.014 513 633.5 513C466.986 513 332 465.882 332 446C332 426.118 466.986 410 633.5 410C800.014 410 935 426.118 935 446Z"
+      fill="#AEF835" />
+    <defs>
+      <linearGradient id="paint0_linear" x1="663" y1="926" x2="649.821" y2="512.99" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#D5AE22" />
+        <stop offset="1" stop-color="#F7E964" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+  </svg>
+</body>
+
+</html>
